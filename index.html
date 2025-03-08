@@ -3642,21 +3642,21 @@
                 }
 
                 const insumoHTML = `
-            <tr>
-                <td>${insumo.nombre}</td>
-                <td>${insumo.categoria}</td>
-                <td>${insumo.cantidad}</td>
-                <td>${insumo.ubicacion}</td>
-                <td><span class="status-badge ${estadoClass}">${estadoText}</span></td>
-                <td class="action-cell">
-                    <button class="btn btn-primary btn-sm" onclick="editInsumo(${index})">
-                        <i class="fas fa-edit"></i>
-                    </button>
-                    <button class="btn btn-danger btn-sm" onclick="deleteInsumo(${index})">
-                        <i class="fas fa-trash"></i>
-                    </button>
-                </td>
-            </tr>
+             <tr>
+        <td data-label="Nombre">${insumo.nombre}</td>
+        <td data-label="Categoría">${insumo.categoria}</td>
+        <td data-label="Stock">${insumo.cantidad}</td>
+        <td data-label="Ubicación">${insumo.ubicacion}</td>
+        <td data-label="Estado"><span class="status-badge ${estadoClass}">${estadoText}</span></td>
+        <td class="action-cell">
+            <button class="btn btn-primary btn-sm" onclick="editInsumo(${index})">
+                <i class="fas fa-edit"></i>
+            </button>
+            <button class="btn btn-danger btn-sm" onclick="deleteInsumo(${index})">
+                <i class="fas fa-trash"></i>
+            </button>
+        </td>
+    </tr>
         `;
 
                 insumosTable.innerHTML += insumoHTML;
